@@ -1,0 +1,46 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Napari Imaging EPFL 2023
+author: EPFL Center for Imaging
+logo: icon.png
+only_build_toc_files: true
+
+# launch_buttons:
+#   notebook_interface : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+#   binderhub_url : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+
+execute:
+  # execute_notebooks: "cache"
+  # execute_notebooks: "auto"
+  execute_notebooks: "off"
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: napari_learning.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/MalloryWittwer/napari-imaging-epfl-2023/
+  branch: main
+  path_to_book: "learning-material"
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: false
+  use_repository_button: true
+
+sphinx:
+  config:
+    html_show_copyright: false
+  
+parse:
+  myst_enable_extensions:
+    - linkify
+    - html_admonition
